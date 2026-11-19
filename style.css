@@ -1,0 +1,133 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --ink: #14213d;
+  --muted: #4a5568;
+  --accent: #2f5bff;
+  --highlight: #ffd23f;
+  --line: #cbd5e1;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1729;
+  --surface: #172036;
+  --ink: #eef2f7;
+  --muted: #a8b3c7;
+  --accent: #8aa4ff;
+  --highlight: #ffd23f;
+  --line: #2b3857;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1729;
+    --surface: #172036;
+    --ink: #eef2f7;
+    --muted: #a8b3c7;
+    --accent: #8aa4ff;
+    --line: #2b3857;
+  }
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0; }
+p { max-width: 65ch; }
+code { background: var(--surface); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.95em; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--highlight); color: #14213d; padding: 0.5rem 1rem; z-index: 10;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- Layout ---------- */
+.layout { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+.sidebar { padding: 2.5rem 0 1.5rem; }
+
+.name {
+  font-size: clamp(3.5rem, 11vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  /* the one bold moment on the page: a highlighter stripe behind the name */
+  background: linear-gradient(transparent 62%, var(--highlight) 62%, var(--highlight) 92%, transparent 92%);
+  width: fit-content;
+}
+
+.tagline { color: var(--muted); max-width: 28ch; margin: 1.25rem 0 2rem; }
+
+.nav { list-style: none; margin: 0 0 2rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+.nav a { color: var(--ink); text-decoration: none; font-weight: 700; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+.nav a:hover { border-bottom-color: var(--accent); }
+
+.theme-toggle {
+  font: inherit; font-size: 0.95rem; cursor: pointer;
+  background: transparent; color: var(--ink);
+  border: 2px solid var(--line); border-radius: 999px; padding: 0.4rem 1rem;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+.content section { padding: 2.5rem 0; border-top: 2px solid var(--line); }
+.content h2 { font-size: 2rem; margin-bottom: 1rem; }
+.hint { color: var(--muted); font-size: 0.95rem; }
+
+@media (min-width: 900px) {
+  .layout { display: grid; grid-template-columns: 340px 1fr; gap: 4rem; }
+  .sidebar { position: sticky; top: 0; align-self: start; height: 100vh; padding: 4rem 0; }
+  .nav { flex-direction: column; }
+  .content { padding: 4rem 0; }
+  .content section:first-child { border-top: 0; padding-top: 0; }
+}
+
+/* ---------- Projects ---------- */
+.projects { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 1.25rem; }
+
+.project {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+}
+.project h3 { font-size: 1.35rem; margin-bottom: 0.4rem; }
+.project p { margin: 0 0 0.75rem; color: var(--muted); }
+.project .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0; margin: 0 0 0.9rem; list-style: none; }
+.project .tags li { font-size: 0.85rem; border: 1px solid var(--line); border-radius: 999px; padding: 0.1rem 0.7rem; }
+.project .project-links { display: flex; gap: 1.25rem; font-weight: 700; }
+
+/* ---------- Skills, contact ---------- */
+.skills { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.skills li { background: var(--surface); border: 2px solid var(--line); border-radius: 6px; padding: 0.3rem 0.9rem; }
+
+.button {
+  display: inline-block; background: var(--accent); color: #fff;
+  text-decoration: none; font-weight: 700; padding: 0.7rem 1.4rem; border-radius: 6px;
+}
+:root[data-theme="dark"] .button { color: #0f1729; }
+.button:hover { filter: brightness(1.1); }
+
+.links { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; gap: 1.5rem; font-weight: 700; }
+.footer { color: var(--muted); font-size: 0.95rem; padding-top: 2rem; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
