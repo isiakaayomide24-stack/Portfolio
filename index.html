@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0b0a" />
+  <meta name="description" content="Ayomide Isiaka — software developer building fast, thoughtful web experiences." />
+  <meta property="og:title" content="Ayomide Isiaka — Software Developer" />
+  <meta property="og:description" content="Front-end developer building fast, accessible web interfaces and the logic behind them." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0b0a'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%23c8ff4d'%3EAI%3C/text%3E%3C/svg%3E" />
+  <title>Ayomide Isiaka — Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ayomide Isiaka — home">AI<span>.</span></a>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#work"><span>01</span>Work</a>
+      <a href="#about"><span>02</span>About</a>
+      <a href="#stack"><span>03</span>Stack</a>
+      <a href="#contact"><span>04</span>Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <p class="hero-kicker" data-reveal>
+        <span class="status-dot" aria-hidden="true"></span>
+        Available for work — remote
+      </p>
+
+      <h1 class="hero-title" data-reveal>
+        <span class="line">Ayomide</span>
+        <span class="line line-outline">Isiaka<span class="asterisk" aria-hidden="true">*</span></span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-role" data-reveal>Software developer<br />building for the web.</p>
+        <p class="hero-desc" data-reveal>I design and build fast, accessible interfaces — and the logic that makes them work.</p>
+        <a class="scroll-cue" href="#work" data-reveal>Scroll to explore <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="terminal" data-reveal aria-label="Terminal introduction">
+        <div class="terminal-bar" aria-hidden="true">
+          <span></span><span></span><span></span>
+          <em>ayomide@portfolio: ~</em>
+          <time class="terminal-clock" id="clock">--:--</time>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="out">Ayomide Isiaka — front-end developer</p>
+          <p><span class="prompt">$</span> cat focus.txt</p>
+          <p class="out">interfaces, interaction, product detail</p>
+          <p><span class="prompt">$</span> status --now</p>
+          <p class="out"><span class="blink" aria-hidden="true">▍</span> open to new projects</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="index-strip" aria-label="Quick facts">
+      <span><em>Role</em> Front-end developer</span>
+      <span><em>Focus</em> Interfaces &amp; product</span>
+      <span><em>Base</em> Remote</span>
+      <span><em>Status</em> Open for work</span>
+    </div>
+
+    <section class="section work" id="work">
+      <div class="section-head">
+        <span class="section-num">01 / Work</span>
+        <h2 data-reveal>Selected work</h2>
+        <p data-reveal>Two builds, both live in this site. Open them, use them, read the code.</p>
+      </div>
+
+      <div class="project-index">
+        <a class="project-row" href="demos/nova/" data-reveal>
+          <span class="col-index">01</span>
+          <div class="col-main">
+            <h3>Nova</h3>
+            <p>A chat workspace with a calm interface, keyboard-first composer, and the option to connect a real model endpoint.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </div>
+          <div class="col-meta">
+            <span>Interface · 2026</span>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+            <span class="row-hint">Open live build</span>
+          </div>
+        </a>
+
+        <a class="project-row" href="demos/ciphera/" data-reveal>
+          <span class="col-index">02</span>
+          <div class="col-main">
+            <h3>Ciphera</h3>
+            <p>A password generator and local vault. Cryptographically random output, entropy readout, and saved entries that stay on the device.</p>
+            <ul class="tags"><li>JavaScript</li><li>Web Crypto</li><li>LocalStorage</li></ul>
+          </div>
+          <div class="col-meta">
+            <span>Tool · 2026</span>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+            <span class="row-hint">Open live build</span>
+          </div>
+        </a>
+
+        <a class="project-row project-row-cta" href="mailto:isiakaayomide24@gmail.com?subject=Project%20enquiry" data-reveal>
+          <span class="col-index">03</span>
+          <div class="col-main">
+            <h3>Your next build</h3>
+            <p>I'm taking on new work. Tell me what you're making and what's getting in the way.</p>
+          </div>
+          <div class="col-meta">
+            <span>Open slot</span>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+            <span class="row-hint">Start a conversation</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-head">
+        <span class="section-num">02 / About</span>
+        <h2 data-reveal>Curious by default.</h2>
+      </div>
+
+      <div class="about-grid">
+        <p class="about-lead" data-reveal>I'm Ayomide, a developer who cares about how things feel as much as how they work.</p>
+        <div class="about-copy" data-reveal>
+          <p>I build web interfaces that are quick, clear, and pleasant to use. My focus is on the details: the spacing, the transitions, the edge cases, and the code underneath.</p>
+          <p>Recently I've been building AI-flavoured tools, secure browser apps, and small products that solve real problems.</p>
+
+          <dl class="facts">
+            <div><dt>Focus</dt><dd>Front-end &amp; product</dd></div>
+            <div><dt>Based</dt><dd>Remote — worldwide</dd></div>
+            <div><dt>Status</dt><dd>Open for work</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stack" id="stack">
+      <div class="section-head">
+        <span class="section-num">03 / Stack</span>
+        <h2 data-reveal>Tools I reach for</h2>
+      </div>
+
+      <div class="stack-grid" data-reveal>
+        <div class="stack-group">
+          <h3>Core</h3>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+        <div class="stack-group">
+          <h3>Build</h3>
+          <ul><li>React</li><li>Node.js</li><li>Vite</li></ul>
+        </div>
+        <div class="stack-group">
+          <h3>Craft</h3>
+          <ul><li>UI design</li><li>Accessibility</li><li>Responsive layout</li></ul>
+        </div>
+        <div class="stack-group">
+          <h3>Workflow</h3>
+          <ul><li>Git</li><li>GitHub</li><li>Figma</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <span class="section-num">04 / Contact</span>
+      <h2 data-reveal>Let's build<br /><em>something good.</em></h2>
+      <p class="contact-note" data-reveal>Have a project, a role, or just an idea? My inbox is open.</p>
+      <a class="contact-email" href="mailto:isiakaayomide24@gmail.com" data-reveal>isiakaayomide24@gmail.com <span aria-hidden="true">↗</span></a>
+
+      <form class="contact-form" id="contactForm" data-reveal>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send message <span aria-hidden="true">↗</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year">2026</span> Ayomide Isiaka</span>
+    <span>Front-end &amp; interaction</span>
+    <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
